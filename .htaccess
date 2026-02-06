@@ -1,0 +1,51 @@
+RewriteEngine On
+Options +FollowSymLinks -Indexes -MultiViews
+DirectorySlash Off
+
+# 1. Älä reititä oikeita tiedostoja tai kansioita (jos ne ovat olemassa)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 2. UUSI: Estä puuttuvien staattisten tiedostojen valuminen index.php:lle
+# Jos tiedostoa ei ole, mutta pääte on jokin näistä, palauta 404 heti.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule \.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$ - [L,R=404]
+
+# 3. Sivusto-ohjaukset
+
+#RewriteRule ^projekti/([0-9]+)/huone/([0-9]+)$ index.php?page=room&project_id=$1&room_id=$2 [QSA,L]
+RewriteRule ^portfolio$ index.php?page=index [QSA,L]
+
+# 4. Lopuksi yleissääntö dynaamisille sivuille
+RewriteRule ^ index.php [QSA,L]
+
+#  Pakkaus, välimuisti ja selaimen cache
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|jpg|jpeg|png|gif|svg|webp|js|css|woff2?|ttf|otf)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    <FilesMatch "\.(html|htm|php)$">
+        Header set Cache-Control "max-age=0, private, must-revalidate"
+    </FilesMatch>
+
+    # Lisää Vary vain gzip-kelpoisille
+    SetEnvIfNoCase Request_URI "^" add_vary_header
+    SetEnvIf dont-vary "^.+$" !add_vary_header
+    Header append Vary Accept-Encoding env=add_vary_header
+</IfModule>

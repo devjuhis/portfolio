@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* =========================
+   Color palette
+   ========================= */
+/* =========================
+   Fonts
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Sora:wght@100..800&family=Zen+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&family=Zen+Dots&display=swap");
+.toc-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  pointer-events: none; /* ei blokkaa contentia */
+}
+.toc-wrapper .toc {
+  position: sticky;
+  top: 50vh;
+  left: 100%;
+  width: 220px;
+  transform: translateX(40px); /* kelluu hieman sisällön päällä */
+  z-index: 10;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.toc-wrapper .toc ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.toc-wrapper .toc ul li a {
+  color: #f1f5f9;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.6rem);
+  text-decoration: none;
+}
+.toc-wrapper .toc ul li a.active {
+  color: #22ff88;
+}
+
+/*# sourceMappingURL=toc.css.map */

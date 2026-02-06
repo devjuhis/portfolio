@@ -1,0 +1,55 @@
+@use "../commons/variables.scss" as v;
+@use "sass:color";
+
+section#about {
+    .flex {
+        display: flex;
+        gap: 100px;
+
+        .left {
+            img {
+                height: 300px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .right {
+            flex: 1;
+
+            h2 {
+                color: v.$color-accent;
+                font-size: 3em;
+            }
+
+            p.sub {
+                font-size: 1.5em;
+                color: v.$color-white;
+            }
+
+            p.desc {
+                font-size: v.$font-size-s;
+                color: v.$text-light;
+                margin: 0 auto 20px auto ;
+            }
+
+            .stack {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 10px;
+                margin-top: 10px;
+
+                .pill {
+                    padding: 5px 20px;
+                    background-color: v.$color-accent;
+                    color: color.scale(v.$color-accent, $lightness: -50%);
+                    border-radius: 999px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

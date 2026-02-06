@@ -1,0 +1,53 @@
+@use "../commons/variables.scss" as v;
+
+section#hero {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 80vh;
+    
+    h1 {
+        font-family: v.$font-heading;
+        font-weight: 900;
+        font-size: v.$font-size-xl;
+        color: v.$color-accent;
+        text-shadow: 
+            0 0 15px rgba(34, 255, 136, 0.6),
+            0 0 40px rgba(34, 255, 136, 0.3);
+    }
+
+    p.sub {
+        font-family: v.$font-body;
+        font-size: v.$font-size-l;
+        color: v.$color-light;
+        padding-bottom: 20px;
+    }
+
+    .tags {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+        max-width: 350px;
+
+        .tag {
+            padding: 5px 20px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 5px;
+            box-shadow: 0 0 12px rgba(255,255,255,0.15);
+            color: #fff;
+        }
+    }
+
+    .ctas {
+        display: flex;
+        align-items: center;    
+        gap: 10px;
+    }
+}

@@ -1,0 +1,42 @@
+/* =========================
+   Color palette
+   ========================= */
+/* =========================
+   Fonts
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Sora:wght@100..800&family=Zen+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&family=Zen+Dots&display=swap");
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9em 2.2em;
+  font-size: clamp(0.9rem, 0.85rem + 0.4vw, 1.1rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  height: 60px;
+  color: #1e293b;
+  background: linear-gradient(135deg, #22ff88, #00f5a0);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(34, 255, 136, 0.5), 0 8px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  text-decoration: none;
+}
+.btn svg {
+  stroke-width: 1px;
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  filter: brightness(1.1);
+  box-shadow: 0 0 30px rgba(34, 255, 136, 0.8), 0 15px 50px rgba(0, 0, 0, 0.8);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 0 12px rgba(34, 255, 136, 0.4), 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/*# sourceMappingURL=buttons.css.map */

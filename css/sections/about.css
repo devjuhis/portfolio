@@ -1,0 +1,51 @@
+/* =========================
+   Color palette
+   ========================= */
+/* =========================
+   Fonts
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Sora:wght@100..800&family=Zen+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&family=Zen+Dots&display=swap");
+section#about .flex {
+  display: flex;
+  gap: 100px;
+}
+section#about .flex .left img {
+  height: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+section#about .flex .right {
+  flex: 1;
+}
+section#about .flex .right h2 {
+  color: #22ff88;
+  font-size: 3em;
+}
+section#about .flex .right p.sub {
+  font-size: 1.5em;
+  color: #ffffff;
+}
+section#about .flex .right p.desc {
+  font-size: clamp(0.75rem, 0.7rem + 0.3vw, 0.9rem);
+  color: #94a3b8;
+  margin: 0 auto 20px auto;
+}
+section#about .flex .right .stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+section#about .flex .right .stack .pill {
+  padding: 5px 20px;
+  background-color: #22ff88;
+  color: rgb(0, 144.5, 66.6923076923);
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=about.css.map */

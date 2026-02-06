@@ -1,0 +1,20 @@
+.glass {
+    position: relative;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.15),   // soft white glow
+        0 18px 45px rgba(0, 0, 0, 0.85);      // deep depth
+
+    color: #ffffff;
+
+    overflow: hidden;
+}

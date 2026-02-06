@@ -1,0 +1,49 @@
+
+@use "../commons/variables.scss" as v;
+
+.toc-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    pointer-events: none; /* ei blokkaa contentia */
+
+    .toc {
+        position: sticky;
+        top: 50vh;
+        left: 100%;
+
+        width: 220px;
+
+        transform: translateX(40px); /* kelluu hieman sisällön päällä */
+
+        z-index: 10;
+
+        padding: 1.5rem;
+
+        background: rgba(0,0,0,0.18);
+        backdrop-filter: blur(12px);
+
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            li a {
+                color: v.$color-light;
+                font-weight: 600;
+                font-size: v.$font-size-l;
+                text-decoration: none;
+
+                &.active {
+                    color: v.$color-accent;
+                }
+            }
+        }
+    }
+}
+

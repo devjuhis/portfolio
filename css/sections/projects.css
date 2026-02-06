@@ -1,0 +1,86 @@
+/* =========================
+   Color palette
+   ========================= */
+/* =========================
+   Fonts
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Sora:wght@100..800&family=Zen+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&family=Zen+Dots&display=swap");
+section#projects #hoveringcards {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  margin-top: 120px;
+}
+section#projects #hoveringcards h2 {
+  color: #22ff88;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+section#projects #hoveringcards p {
+  font-size: clamp(0.75rem, 0.7rem + 0.3vw, 0.9rem);
+  color: #94a3b8;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+}
+section#projects #hoveringcards .list {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  margin-top: 50px;
+}
+section#projects #hoveringcards .list .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 220px;
+  height: 350px;
+  transition: 0.5s;
+  filter: brightness(0.2);
+  background-color: #fff;
+  padding: 20px;
+}
+section#projects #hoveringcards .list .item .title {
+  text-align: center;
+  padding: 20px 0 0 0;
+  color: #020617;
+  font-weight: 600;
+}
+section#projects #hoveringcards .list .item .desc {
+  color: #020617;
+}
+section#projects #hoveringcards .list .item:hover {
+  filter: brightness(1);
+  transform: translateZ(100px);
+}
+section#projects #hoveringcards .list .item:hover + * {
+  filter: brightness(0.8);
+  transform: translateZ(50px) rotateY(20deg);
+}
+section#projects #hoveringcards .list .item:hover + * + * {
+  filter: brightness(0.4);
+  transform: translateZ(10px) rotateY(5deg);
+}
+section#projects #hoveringcards .list .item:has(+ *:hover) {
+  filter: brightness(0.8);
+  transform: translateZ(50px) rotateY(-20deg);
+}
+section#projects #hoveringcards .list .item:has(+ * + *:hover) {
+  filter: brightness(0.4);
+  transform: translateZ(10px) rotateY(-5deg);
+}
+section#projects #hoveringcards .list .item {
+  /*img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  }*/
+}
+
+/*# sourceMappingURL=projects.css.map */

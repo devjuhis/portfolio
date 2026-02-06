@@ -1,0 +1,24 @@
+
+@use "variables.scss" as v;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: v.$elegant-bg;
+    font-family: v.$font-body;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#content {
+    position: relative;
+    min-height: 200vh;
+}
+

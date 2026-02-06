@@ -1,0 +1,59 @@
+
+@use "variables.scss" as v;
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.9em 2.2em;
+
+    font-size: v.$font-size-m;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    height: 60px;
+
+    color: v.$color-dark;
+    background: linear-gradient(
+        135deg,
+        #22ff88,
+        #00f5a0
+    );
+
+    border: none;
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(34, 255, 136, 0.5),
+        0 8px 30px rgba(0, 0, 0, 0.6);
+
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+
+    text-decoration: none;
+
+    svg {
+        stroke-width: 1px;
+    }
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.02);
+
+    filter: brightness(1.1);
+
+    box-shadow:
+        0 0 30px rgba(34, 255, 136, 0.8),
+        0 15px 50px rgba(0, 0, 0, 0.8);
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.98);
+
+    box-shadow:
+        0 0 12px rgba(34, 255, 136, 0.4),
+        0 6px 20px rgba(0, 0, 0, 0.6);
+}

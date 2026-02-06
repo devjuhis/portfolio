@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../scss/commons/variables.scss","../../scss/sections/toc.scss"],"names":[],"mappings":";AAAA;AAAA;AAAA;AAkCA;AAAA;AAAA;AAKQ;AAGA;ACvCR;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EAEA;EAEA;EAEA;EAEA;EAEA;EACA;EAEA;EACA;;AAEA;EACI;EACA;EACA;EACA;;AAEA;EACI,ODXF;ECYE;EACA,WDYF;ECXE;;AAEA;EACI,ODnCL","file":"toc.css"}
