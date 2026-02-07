@@ -14,12 +14,23 @@ section#hero {
   gap: 30px;
   height: 80vh;
 }
+@media screen and (max-width: 768px) {
+  section#hero {
+    padding-top: 100px;
+    height: 90vh;
+  }
+}
 section#hero h1 {
   font-family: "Orbitron", sans-serif;
   font-weight: 900;
   font-size: clamp(3rem, 2.2rem + 4vw, 6rem);
   color: #22ff88;
   text-shadow: 0 0 15px rgba(34, 255, 136, 0.6), 0 0 40px rgba(34, 255, 136, 0.3);
+}
+@media screen and (max-width: 768px) {
+  section#hero h1 {
+    text-align: center;
+  }
 }
 section#hero p.sub {
   font-family: "Manrope", Helvetica, Arial, sans-serif;

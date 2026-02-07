@@ -6,8 +6,10 @@
    ========================= */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Sora:wght@100..800&family=Zen+Dots&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&family=Zen+Dots&display=swap");
+section#projects {
+  margin: 120px 0;
+}
 section#projects #hoveringcards {
-  height: 100vh;
   width: 100%;
   position: relative;
   margin-top: 120px;
@@ -35,6 +37,12 @@ section#projects #hoveringcards .list {
   transform: perspective(1000px);
   margin-top: 50px;
 }
+@media screen and (max-width: 768px) {
+  section#projects #hoveringcards .list {
+    flex-direction: column;
+    transform-style: flat;
+  }
+}
 section#projects #hoveringcards .list .item {
   display: flex;
   flex-direction: column;
@@ -51,6 +59,13 @@ section#projects #hoveringcards .list .item .title {
   padding: 20px 0 0 0;
   color: #020617;
   font-weight: 600;
+}
+section#projects #hoveringcards .list .item .title a {
+  text-align: center;
+  padding: 20px 0 0 0;
+  color: #020617;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.6rem);
 }
 section#projects #hoveringcards .list .item .desc {
   color: #020617;

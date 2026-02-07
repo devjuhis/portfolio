@@ -12,14 +12,20 @@ html {
 
 body {
   margin: 0;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0b1c3d 50%, #020617 100%);
   font-family: "Manrope", Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0b1c3d 50%, #020617 100%);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-padding: 100px;
+}
+@media screen and (max-width: 768px) {
+  * {
+    scroll-padding: 80px;
+  }
 }
 
 #content {

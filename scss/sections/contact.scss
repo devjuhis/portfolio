@@ -22,9 +22,9 @@ section#contact {
 
     .btn {
         margin: 30px auto;
-        a {
-            color: v.$color-black;
-            text-decoration: none;
-        }
+        color: v.$color-black;
+        text-decoration: none;
+        z-index: 111!important;
+        max-width: 300px;
     }
 }

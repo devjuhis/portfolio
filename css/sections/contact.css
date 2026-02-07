@@ -25,10 +25,10 @@ section#contact p.sub {
 }
 section#contact .btn {
   margin: 30px auto;
-}
-section#contact .btn a {
   color: #020617;
   text-decoration: none;
+  z-index: 111 !important;
+  max-width: 300px;
 }
 
 /*# sourceMappingURL=contact.css.map */

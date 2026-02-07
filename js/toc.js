@@ -6,6 +6,8 @@ const observer = new IntersectionObserver(
     entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                console.log(entry);
+                
                 links.forEach(link => {
                     link.classList.toggle(
                         "active",
@@ -16,7 +18,7 @@ const observer = new IntersectionObserver(
         });
     },
     {
-        threshold: 0.6
+        threshold: 0.25
     }
 );
 
